@@ -1,7 +1,7 @@
-function Card({ card }) {
+function Card({ card, onCardClick }) {
   return (
-    <div className="card">
-      <img src="{card.image}" alt={`${card.name}image`} />
+    <div className="card" onClick={() => onCardClick(card.id)}>
+      <img src={card.image} alt={`${card.name}image`} />
       <h3>{card.name}</h3>
     </div>
   );
